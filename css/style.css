@@ -1,0 +1,164 @@
+body {
+  background-color: #6798F8;
+}
+
+.sun {
+  position: absolute;
+  left: 30%;
+  top: 150px;
+}
+
+.sun > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sun .ball {
+  width: 40px;
+  min-height: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #F8E049;
+}
+
+.sun .ray {
+  background-color: #DFA835;
+  border-radius: 3px;
+  width: 40px;
+  min-height: 40px;
+}
+
+.sun .ray:first-of-type {
+  -webkit-animation: sunShineRotatedRay 8s 0s linear infinite both;
+          animation: sunShineRotatedRay 8s 0s linear infinite both;
+}
+
+.sun .ray:nth-child(2) {
+  -webkit-animation: sunShineRegularRay 8s 0s linear infinite both;
+          animation: sunShineRegularRay 8s 0s linear infinite both;
+}
+
+@-webkit-keyframes sunShineRegularRay {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes sunShineRegularRay {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes sunShineRotatedRay {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  to {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+}
+@keyframes sunShineRotatedRay {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  to {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+}
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+.home {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.earth {
+  width: 100px;
+  min-height: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background: #64C0D4;
+  position: static;
+}
+
+.moon {
+  width: 20px;
+  min-height: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #43A047;
+  -webkit-animation: moonOrbit 5s 0s infinite linear;
+          animation: moonOrbit 5s 0s infinite linear;
+  -webkit-transform-origin: 100px 50%;
+      -ms-transform-origin: 100px 50%;
+          transform-origin: 100px 50%;
+  margin-right: 30px;
+}
+
+@-webkit-keyframes starTwinkle {
+  0% {
+    opacity: .5;
+  }
+  50% {
+    opacity: .2;
+  }
+  100% {
+    opacity: .6;
+  }
+}
+
+@keyframes starTwinkle {
+  0% {
+    opacity: .5;
+  }
+  50% {
+    opacity: .2;
+  }
+  100% {
+    opacity: .6;
+  }
+}
+@-webkit-keyframes moonOrbit {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+@keyframes moonOrbit {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
